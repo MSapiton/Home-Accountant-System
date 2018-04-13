@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>home-accountant</artifactId>
+        <groupId>home-accountant</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>home-accountant-web</artifactId>
+    <packaging>war</packaging>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.earthport.ha</groupId>
+            <artifactId>home-accountant-angular</artifactId>
+            <type>zip</type>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+    <plugins>
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <configuration>
+                <warName>home-accountant-web</warName>
+                <overlays>
+                    <overlay>
+                        <groupId>com.earthport.ha</groupId>
+                        <artifactId>home-accountant-angular</artifactId>
+                        <type>zip</type>
+                    </overlay>
+                </overlays>
+            </configuration>
+        </plugin>
+
+    </plugins>
+
+    </build>
+
+</project>

@@ -18,7 +18,7 @@
     </listener>
 
     <welcome-file-list>
-        <welcome-file>angular/src/index.html</welcome-file>
+        <welcome-file>/angular/dist/index.html</welcome-file>
     </welcome-file-list>
 
 </web-app>

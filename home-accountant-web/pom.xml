@@ -15,20 +15,26 @@
     <packaging>war</packaging>
     <version>1.0.0-SNAPSHOT</version>
 
-
-
-
-    <dependencies>        
+    <dependencies>
 
         <dependency>
             <groupId>com.earthport.ha</groupId>
             <artifactId>home-accountant-angular</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
             <type>zip</type>
         </dependency>
-       
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>5.0.5.RELEASE</version>
+        </dependency>
+
     </dependencies>
 
-    <build>        
+    <build>
         <plugins>
 
             <plugin>
@@ -45,8 +51,15 @@
                     </overlays>
                 </configuration>
             </plugin>
-                      
+
+
+            <plugin>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-maven-plugin</artifactId>
+                <version>9.3.11.v20160721</version>
+            </plugin>
+
         </plugins>
     </build>
-    
+
 </project>

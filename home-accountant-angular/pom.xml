@@ -17,6 +17,7 @@
 
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-clean-plugin</artifactId>
@@ -37,7 +38,6 @@
                     </filesets>
                 </configuration>
             </plugin>
-
 
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
@@ -94,7 +94,8 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
-    
+
 </project>

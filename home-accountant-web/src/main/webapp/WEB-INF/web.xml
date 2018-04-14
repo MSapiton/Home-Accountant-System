@@ -8,7 +8,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/mvc-dispatcher-servlet.xml</param-value>
+        <param-value>\WEB-INF\mvc-dispatcher-servlet.xml</param-value>
     </context-param>
 
     <listener>
@@ -18,7 +18,7 @@
     </listener>
 
     <welcome-file-list>
-        <welcome-file>/angular/dist/index.html</welcome-file>
+        <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 
 </web-app>

@@ -18,7 +18,7 @@
 
    <mvc:resources mapping="/**" location="/" cache-period="31556926"/>
    <mvc:annotation-driven/>
-   <context:component-scan base-package="Controllers"/>
+   <context:component-scan base-package="controller"/>
 
 
 

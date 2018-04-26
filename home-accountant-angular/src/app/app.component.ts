@@ -1,10 +1,48 @@
-import { Component } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {MavenService} from "./app.service";
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
+
+
 })
-export class AppComponent {
-  title = 'app';
+export class AppComponent implements OnInit { //implements OnDestroy
+  title = 'Home-accountant-system';
+  public maven;
+
+
+
+  constructor(private mavenService: MavenService) {
+
+  }
+
+
+  ngOnInit(): void {this.showMaven()}
+
+  showMaven() {
+
+    this.mavenService.getMaven()
+      .subscribe(data => {
+        this.maven = data;
+        }
+      )
+  };
+
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+

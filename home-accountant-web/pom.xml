@@ -32,6 +32,21 @@
             <version>5.0.5.RELEASE</version>
         </dependency>
 
+
+        <!-- to read pom.xml -->
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-model</artifactId>
+            <version>3.5.3</version>
+        </dependency>
+
+        <!--for JSON-->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.5</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -61,5 +76,9 @@
 
         </plugins>
     </build>
+    <properties>
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
 
+    </properties>
 </project>

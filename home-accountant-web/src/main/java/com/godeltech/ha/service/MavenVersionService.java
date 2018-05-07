@@ -24,7 +24,7 @@ public class MavenVersionService {
      * @return this home-accountant-web unit's maven version
      * @throws VersionReaderException  if an reading pom.xml exception occurred
      */
-    public MavenVersion getMavenVersion() {
+    public MavenVersion getMavenVersion()  {
         MavenVersion mavenVersion = new MavenVersion();
         try {
             MavenXpp3Reader reader = new MavenXpp3Reader();
@@ -32,7 +32,7 @@ public class MavenVersionService {
             mavenVersion.setVersion(model.getVersion());
         } catch (IOException e) {
             e.printStackTrace();
-            throw new VersionReaderException("cannot read file", e);
+            throw new VersionReaderException("cannot read pom.xml file", e);
         } catch (XmlPullParserException ex) {
             ex.printStackTrace();
             throw new VersionReaderException("cannot parse XML", ex);

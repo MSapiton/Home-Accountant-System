@@ -31,10 +31,8 @@ public class MavenVersionService {
             Model model = reader.read(new FileReader("pom.xml"));
             mavenVersion.setVersion(model.getVersion());
         } catch (IOException e) {
-            e.printStackTrace();
             throw new VersionReaderException("cannot read pom.xml file", e);
         } catch (XmlPullParserException ex) {
-            ex.printStackTrace();
             throw new VersionReaderException("cannot parse XML", ex);
         }
 

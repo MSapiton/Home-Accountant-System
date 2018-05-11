@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component,  OnInit} from '@angular/core';
 import {MavenService} from "./app.service";
 
 
@@ -9,10 +9,9 @@ import {MavenService} from "./app.service";
 
 
 })
-export class AppComponent implements OnInit { //implements OnDestroy
+export class AppComponent implements OnInit {
   title = 'Home-accountant-system';
   public maven;
-
 
 
   constructor(private mavenService: MavenService) {
@@ -20,7 +19,9 @@ export class AppComponent implements OnInit { //implements OnDestroy
   }
 
 
-  ngOnInit(): void {this.showMaven()}
+  ngOnInit(): void {
+    this.showMaven()
+  }
 
   showMaven() {
 
@@ -30,8 +31,6 @@ export class AppComponent implements OnInit { //implements OnDestroy
         }
       )
   };
-
-
 
 }
 

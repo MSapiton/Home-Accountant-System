@@ -1,7 +1,11 @@
 package com.godeltech.ha.service;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.Test;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.is;
 
 
 public class MavenVersionServiceTest {
@@ -9,10 +13,8 @@ public class MavenVersionServiceTest {
 
     @Test
     public void getMavenVersionMethodShouldReturnCorrectVersion() {
-
         MavenVersionService serviceTester = new MavenVersionService();
-        assertEquals(currrentVersion, serviceTester.getMavenVersion().toString());
+        assertThat(currrentVersion, is(equalTo(serviceTester.getMavenVersion().toString())));
 
     }
-
 }

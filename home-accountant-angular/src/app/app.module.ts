@@ -5,8 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms";
 import {MavenService} from "./app.service";
-/*import {MavenModule} from "./maven/maven.module";*/
-
 
 
 @NgModule({
